@@ -1,0 +1,332 @@
+/* ============================================[@media]================================================= */
+@media (max-width: 1000px) {
+	.home .container
+    {
+        flex-direction: column;
+		margin-top: 0;
+    }
+	.text_home_title 
+	{
+		width: 90%;
+		height: 100%;
+		gap: 40px;
+		text-align: center;
+		margin-bottom: 4rem;
+	}
+	.data_cv
+	{
+		justify-content: space-around;
+	}
+    .about__container
+	{
+		flex-direction: column-reverse;
+		justify-content: center;
+		align-items: center;
+		gap: 4rem;
+		margin-bottom: 5rem;
+	}
+	.about__container .images
+	{
+		position: relative;
+        margin-top: 2rem;
+	}
+	.about__container .about_data
+	{
+		width: 100%;
+	}
+	.about__container .images
+	{
+		margin-left: 4rem;
+	}
+	.about_data .about_cards
+	{
+		margin-top: .6rem;
+	}
+}
+@media (max-width: 600px) {
+	section.active
+	{
+		display: block;
+		margin: 100px 30px 0;
+	}
+	section.skills
+	{
+		margin: 0 30px 0;
+	}
+	nav{
+		width: 100%;
+		padding: 10px;
+		top: 0;
+		border-radius: 0;
+		border: none;
+		border-bottom: 1px solid var(--bg_nav_border);
+	}
+	nav .container
+	{
+		width: 90%;
+	}
+	nav a
+	{
+		height: 90%;
+		line-height: 30px;
+		padding: 0 20px;
+	}
+	nav a span{
+		display: none;
+	}
+	nav a i{
+		visibility: visible;
+		font-size: 1.3rem;
+		line-height: 50px;
+		position: relative;
+	}
+	a.active
+	{
+		border-right: none;
+		box-shadow: none;
+	}
+
+	@keyframes ahmed {
+		0%
+		{
+			height: 100%;
+			z-index: 99;
+		}
+		100%
+		{
+			height: 0;
+			z-index: 99;
+		}
+	}
+	@keyframes ahmed2 {
+		0%
+		{
+			height: 100%;
+			z-index: 99;
+		}
+		100%
+		{
+			height: 0;
+			z-index: 99;
+		}
+	}
+	.moon {
+		position: fixed;
+		bottom:15px;
+		right: 15px;
+		width: 45px;
+		height: 45px;
+	}
+}
+@media (max-width: 460px) {
+	.text_home_title 
+	{
+		width: 100%;
+	}
+	.home__images
+	{
+		width: 100%;
+	}
+}
+@media (max-width: 450px) {
+	.about__container .images
+	{
+		margin-left: 0;
+	}
+	.about__container .images img
+	{
+		width: 100%;
+        height: 100%;
+        rotate: 0deg;
+		margin-left: 0;
+	}
+	.about__container .images .about_dg
+	{
+		display: none;
+	}
+	.about__container .images .about_dg2
+	{
+		display: none;
+	}
+	.about_data .about_cards
+	{
+		justify-content: center;
+	}
+	.about_data .about_cards .card
+	{
+		width: 100%;
+	}
+	.about_data ul {
+		gap: 0;
+	}
+	.education__card span {
+		font-size: .8rem;
+		margin-top: 0.5rem;
+	}
+	.education__card p {
+		font-size: 0.6rem;
+	}
+	.education__card h2 {
+		font-size: 1.1rem;
+	}
+	.education__card .education__btn_cert {
+		padding: 7px 5px;
+		font-size: 1rem;
+		width: 120px;
+	}
+	.data_cv .cv {
+		padding: 13px 17px;
+	}
+
+}
+@media (max-width: 730px) {
+	.certificate__active2
+	{
+		width: 96%;	
+	}
+}
+@media (max-width: 630px) {
+	.education__cards
+	{
+		display: block;
+	}
+	.education__card_all .education__card
+	{
+		width: 100%;
+	}
+	.bg_education
+	{
+		display: none;
+	}
+
+}
+@media (max-width: 870px) {
+	section.skills
+	{
+		margin: 90px 15px 0;
+	}
+	.skills__cards
+	{
+		width: 100%;
+	}
+    .contact__container
+	{
+		align-items: center;
+		margin-top: 0;
+	}
+	.contact__title
+	{
+		text-align: center;
+	}
+	.contact__title br 
+	{
+		display: none;
+	}
+	.contact__text  
+	{
+		text-align: center;
+	}
+	.contact__icon
+	{
+		justify-content: center;
+	}
+}
+
+
+@media (max-width: 400px) {
+	.skills__card
+	{
+		width: 40%;
+	}
+	.text_home_title .data_home p
+	{
+		font-size: 1.7rem;
+	}
+	.inner_cursor,
+	.outer_cursor
+	{
+		display: none;
+	}
+	.swiper-slide
+	{
+		width: 250px !important;
+	}
+	.home__article,
+	.home__img
+	{
+		width: 230px;
+	}
+}
+
+
+@media (max-width: 520px) {
+	.contact__group
+	{
+		display: block;
+	}
+	.contact__input
+	{
+		width: 100%;
+	}
+	.contact__input:nth-child(2)
+	{
+		margin-top: 1rem;
+	}
+	.contact__form 
+	{
+		gap: 0;
+	}
+	.contact__button
+	{
+		margin-top: 1.5rem;
+	}
+}
+@media (max-width: 560px) {
+	#filterable-cards .card
+	{
+		width: 80%;
+	}
+  }
+  @media (max-width: 400px) {
+	#filterable-cards .card
+	{
+		width: 100%;
+	}
+  }
+
+
+  @media (max-width: 300px) {
+	nav
+	{
+		height: 60px;
+		zoom: .9;
+	}
+	nav .container
+	{
+		width: 100%;
+	}
+	nav a
+	{
+		padding: 0 15px;
+		height: 80%;
+	}
+	a:not(.active):hover:after
+	{
+		top: 0;
+	}
+	.moon,
+	.trans,
+	.trans select,
+	.click
+	{
+		zoom: .9;
+	}
+	.trans select
+	{
+		height: 55px;
+    	width: 55px;
+	}
+
+
+}
+/* ============================================[end_@media]================================================= */
