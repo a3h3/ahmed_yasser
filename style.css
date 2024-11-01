@@ -29,7 +29,7 @@ body {
 	color: var(--text_body);
 	position: relative;
 	overflow-x: hidden;
-	cursor: none;
+	/* cursor: none; */
 }
 body.light {
 	--bg_body: #ffffff;
@@ -213,11 +213,11 @@ nav a:not(.active):hover:after
 section
 {
 	display: none;
-	padding: 120px 30px 0;
 }
 section.active
 {
 	display: block;
+	margin: 100px 30px 0;
 }
 
 /* =================================================home================================================= */
@@ -355,35 +355,7 @@ section.active
 
 /* ========================================================================== */
 
-@media (max-width: 1000px) {
-	.home .container
-    {
-        flex-direction: column;
-		margin-top: 0;
-    }
-	.text_home_title 
-	{
-		width: 90%;
-		height: 100%;
-		gap: 40px;
-		text-align: center;
-		margin-bottom: 4rem;
-	}
-	.data_cv
-	{
-		justify-content: space-around;
-	}
-}
-@media (max-width: 460px) {
-	.text_home_title 
-	{
-		width: 100%;
-	}
-	.home__images
-	{
-		width: 100%;
-	}
-}
+
 
 /* ===========================================[about]======================================== */
 .about__container
@@ -601,72 +573,14 @@ section.active
 	border-radius: 5px;
 	padding: 10px 20px;
 }
-@media (max-width: 1000px) {
-	.about__container
-	{
-		flex-direction: column-reverse;
-		justify-content: center;
-		align-items: center;
-		gap: 4rem;
-		margin-bottom: 5rem;
-	}
-	.about__container .images
-	{
-		position: relative;
-		margin-top: 0;
-	}
-	.about__container .about_data
-	{
-		width: 100%;
-	}
-	.about__container .images
-	{
-		margin-left: 4rem;
-	}
-	.about_data .about_cards
-	{
-		margin-top: .6rem;
-	}
-}
-@media (max-width: 450px) {
-	.about__container .images
-	{
-		margin-left: 0;
-	}
-	.about__container .images img
-	{
-		width: 100%;
-        height: 100%;
-        rotate: 0deg;
-		margin-left: 0;
-	}
-	.about__container .images .about_dg
-	{
-		display: none;
-	}
-	.about__container .images .about_dg2
-	{
-		display: none;
-	}
-	.about_data .about_cards
-	{
-		justify-content: center;
-	}
-	.about_data .about_cards .card
-	{
-		width: 100%;
-	}
-	.about_data ul {
-		gap: 0;
-	}
-}
+
 
 /* =========================================[end_about]====================================== */
 
 /* =========================================[start_skills]========================================= */
 section.skills
 {
-	padding: 100px 30px 0;
+	margin: 100px 30px 0;
 	margin-bottom: 5rem;
 }
 .skills__cards
@@ -678,16 +592,7 @@ section.skills
 	width: 800px;
 	margin: 2rem auto;
 }
-@media (max-width: 870px) {
-	section.skills
-	{
-		padding: 100px 15px 0;
-	}
-	.skills__cards
-	{
-		width: 100%;
-	}
-}
+
 .skills_title
 {
     margin-top: 2rem;
@@ -823,21 +728,7 @@ section.skills
     transition:.3s;
 	margin: 0 auto;
 }
-@media (max-width: 630px) {
-	.education__cards
-	{
-		display: block;
-	}
-	.education__card_all .education__card
-	{
-		width: 100%;
-	}
-	.bg_education
-	{
-		display: none;
-	}
 
-}
 .education__card_all .education__card:hover
 {
 	border: 1px solid #0bd1d1;
@@ -943,12 +834,6 @@ section.skills
 	background-color: var(--bg_body);
 	cursor: pointer;
 }
-@media (max-width: 730px) {
-	.certificate__active2
-	{
-		width: 100%;	
-	}
-}
 /* =========================================[end_skills]========================================= */
 
 
@@ -1004,18 +889,6 @@ section.skills
 	padding: 10px;
 	position: relative;
 	overflow: hidden;
-  }
-  @media (max-width: 560px) {
-	#filterable-cards .card
-	{
-		width: 80%;
-	}
-  }
-  @media (max-width: 400px) {
-	#filterable-cards .card
-	{
-		width: 100%;
-	}
   }
   #filterable-cards .card:hover
   {
@@ -1219,51 +1092,6 @@ section.skills
 	background-position: right;
 }
 
-@media (max-width:850px) {
-	.contact__container
-	{
-		align-items: center;
-		margin-top: 0;
-	}
-	.contact__title
-	{
-		text-align: center;
-	}
-	.contact__title br 
-	{
-		display: none;
-	}
-	.contact__text  
-	{
-		text-align: center;
-	}
-	.contact__icon
-	{
-		justify-content: center;
-	}
-}
-@media (max-width: 520px) {
-	.contact__group
-	{
-		display: block;
-	}
-	.contact__input
-	{
-		width: 100%;
-	}
-	.contact__input:nth-child(2)
-	{
-		margin-top: 1rem;
-	}
-	.contact__form 
-	{
-		gap: 0;
-	}
-	.contact__button
-	{
-		margin-top: 1.5rem;
-	}
-}
 /* =========================================[end_cotact]============================================ */
 
 
@@ -1287,7 +1115,7 @@ section.skills
 	position: absolute;
 	left: 0;
 	top: 0;
-	height: 100vh;
+	height: 100%;
 	width: 100%;
 	background:#0b66c1;
 	animation: ahmed2 .7s forwards ease-in-out;
@@ -1330,16 +1158,16 @@ section.skills
 	section
 	{
 		display: none;
-		padding: 55px 30px 0;
+		margin: 30px 30px 0;
 	}
 	section.skills
 	{
-		padding: 50px 30px 0;
+		margin: 0 30px 0;
 	}
 	nav{
 		width: 100%;
 		padding: 10px;
-		top: calc(100vh - 60px);
+		top: 0;
 		border-radius: 0;
 		border: none;
 		border-bottom: 1px solid var(--bg_nav_border);
@@ -1395,10 +1223,10 @@ section.skills
 	}
 	.moon {
 		position: fixed;
-		top: 10px;
-		right: 10px;
-		width: 50px;
-		height: 50px;
+		bottom:15px;
+		right: 15px;
+		width: 45px;
+		height: 45px;
 		background: var(--bg_nav_2);
 		border-radius: 50%;
 		box-shadow: 0 2px 3px 0 rgba(0, 0, 0, .1);
@@ -1417,7 +1245,6 @@ section.skills
 	{
 		height: 60px;
 		zoom: .9;
-		top: calc(100vh + 9px);
 	}
 	nav .container
 	{
@@ -1447,6 +1274,208 @@ section.skills
 
 
 }
+@media (max-width: 1000px) {
+	.home .container
+    {
+        flex-direction: column;
+		margin-top: 0;
+    }
+	.text_home_title 
+	{
+		width: 90%;
+		height: 100%;
+		gap: 40px;
+		text-align: center;
+		margin-bottom: 4rem;
+	}
+	.data_cv
+	{
+		justify-content: space-around;
+	}
+}
+@media (max-width: 460px) {
+	.text_home_title 
+	{
+		width: 100%;
+	}
+	.home__images
+	{
+		width: 100%;
+	}
+}
+@media (max-width: 1000px) {
+	.about__container
+	{
+		flex-direction: column-reverse;
+		justify-content: center;
+		align-items: center;
+		gap: 4rem;
+		margin-bottom: 5rem;
+	}
+	.about__container .images
+	{
+		position: relative;
+		margin-top: 0;
+	}
+	.about__container .about_data
+	{
+		width: 100%;
+	}
+	.about__container .images
+	{
+		margin-left: 4rem;
+	}
+	.about_data .about_cards
+	{
+		margin-top: .6rem;
+	}
+}
+@media (max-width: 450px) {
+	.about__container .images
+	{
+		margin-left: 0;
+	}
+	.about__container .images img
+	{
+		width: 100%;
+        height: 100%;
+        rotate: 0deg;
+		margin-left: 0;
+	}
+	.about__container .images .about_dg
+	{
+		display: none;
+	}
+	.about__container .images .about_dg2
+	{
+		display: none;
+	}
+	.about_data .about_cards
+	{
+		justify-content: center;
+	}
+	.about_data .about_cards .card
+	{
+		width: 100%;
+	}
+	.about_data ul {
+		gap: 0;
+	}
+}
+@media (max-width: 730px) {
+	.certificate__active2
+	{
+		width: 100%;	
+	}
+}
+@media (max-width: 630px) {
+	.education__cards
+	{
+		display: block;
+	}
+	.education__card_all .education__card
+	{
+		width: 100%;
+	}
+	.bg_education
+	{
+		display: none;
+	}
+
+}
+@media (max-width: 870px) {
+	section.skills
+	{
+		margin: 90px 10px 0;
+	}
+	.skills__cards
+	{
+		width: 100%;
+	}
+}
+
+@media (max-width: 400px) {
+	.skills__card
+	{
+		width: 40%;
+	}
+	.text_home_title .data_home p
+	{
+		font-size: 1.7rem;
+	}
+	.inner_cursor,
+	.outer_cursor
+	{
+		display: none;
+	}
+	.swiper-slide
+	{
+		width: 250px !important;
+	}
+	.home__article,
+	.home__img
+	{
+		width: 230px;
+	}
+}
+
+@media (max-width:850px) {
+	.contact__container
+	{
+		align-items: center;
+		margin-top: 0;
+	}
+	.contact__title
+	{
+		text-align: center;
+	}
+	.contact__title br 
+	{
+		display: none;
+	}
+	.contact__text  
+	{
+		text-align: center;
+	}
+	.contact__icon
+	{
+		justify-content: center;
+	}
+}
+@media (max-width: 520px) {
+	.contact__group
+	{
+		display: block;
+	}
+	.contact__input
+	{
+		width: 100%;
+	}
+	.contact__input:nth-child(2)
+	{
+		margin-top: 1rem;
+	}
+	.contact__form 
+	{
+		gap: 0;
+	}
+	.contact__button
+	{
+		margin-top: 1.5rem;
+	}
+}
+@media (max-width: 560px) {
+	#filterable-cards .card
+	{
+		width: 80%;
+	}
+  }
+  @media (max-width: 400px) {
+	#filterable-cards .card
+	{
+		width: 100%;
+	}
+  }
 /* ============================================[end_@media]================================================= */
 
 
