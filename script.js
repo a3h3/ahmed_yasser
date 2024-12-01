@@ -2,6 +2,7 @@ let el_nav = document.querySelectorAll("nav a");
 let el_section_container = document.querySelectorAll("section");
 let bg_active = document.querySelectorAll(".bg");
 let el_home__article = document.querySelectorAll('.home__article');
+let el_btn = document.querySelector('.btn');
 
 el_nav.forEach((link, index)=> {
     link.addEventListener("click", ()=> {
@@ -20,6 +21,13 @@ el_nav.forEach((link, index)=> {
             bg_active[3].classList.add("active");
         })  
     })
+    // =========================
+    el_btn.addEventListener("click", ()=> {
+        remove()
+        el_nav[4].classList.add("active");
+        el_section_container[4].classList.add("active");
+        bg_active[4].classList.add("active");
+    })  
 })
 
 function remove() {
@@ -55,26 +63,6 @@ el_body.className = localStorage.getItem("light");
 //   });
 
 // ====================================================================
-let el_about_cards = document.querySelectorAll('.about_cards .card');
-let el_about_header = document.querySelectorAll('.about_header .about_information');
-
-el_about_cards.forEach((card, index)=> {
-    card.addEventListener('click', ()=> {
-        remove_active();
-        el_about_cards[index].classList.add('active');
-        el_about_header[index].classList.add('active');
-    })
-})
-
-function remove_active() {
-    el_about_cards.forEach((card)=> {
-        card.classList.remove('active');
-    })
-    el_about_header.forEach((header)=> {
-        header.classList.remove('active');
-    })
-}
-
 
 // =================================[cursor]=======================================
 let el_inner_cursor = document.querySelector('.inner_cursor');
@@ -203,3 +191,15 @@ const sendEmail = (e) => {
     })
 }
 contactForm.addEventListener('submit', sendEmail)
+
+
+// ===========================================================================
+let el_portfolio__btn = document.querySelectorAll('.portfolio__btn');
+let el_portfolio__btn_1 = document.querySelectorAll('.portfolio__btn_1');
+
+el_portfolio__btn.forEach((card, index) => {
+    card.addEventListener('click', () => {
+        el_key_img = el_portfolio__btn_1[index].attributes[0].value;
+        localStorage.setItem('image', el_key_img);
+    });
+});
